@@ -1,0 +1,143 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --dark-cyan: hsl(158, 36%, 37%);
+  --cream: hsl(30, 38%, 92%);
+  --dark-blue: hsl(212, 21%, 14%);
+  --dark-gray-blue: hsl(228, 12%, 48%);
+  --white: hsl(0, 0%, 100%);
+  --body-font: "Montserrat", sans-serif;
+  --heading: "Fraunces", serif;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  background-color: var(--cream);
+  font-family: var(--body-font);
+}
+
+h1 {
+  font-weight: 700;
+  color: var(--dark-gray-blue);
+  font-size: 1em;
+  letter-spacing: 5px;
+}
+
+h2 {
+  font-family: var(--heading);
+  font-weight: 700;
+  font-size: 2.5em;
+  margin: 20px 0;
+  width: 90%;
+}
+
+p {
+  font-weight: 500;
+  color: var(--dark-gray-blue);
+  width: 90%;
+}
+
+.desktop {
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.mobile {
+  display: none;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  border-radius: 10px;
+  background-color: var(--white);
+  width: 600px;
+  height: 450px;
+}
+
+.product-description {
+  margin-left: 30px;
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+}
+
+.pricing {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.price {
+  font-family: "Fraunces", serif;
+  color: var(--dark-cyan);
+  font-size: 2.5em;
+  margin-right: 20px;
+}
+
+.disc-price {
+  color: var(--dark-gray-blue);
+  text-decoration: line-through;
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  width: 90%;
+  background-color: var(--dark-cyan);
+  color: var(--white);
+  padding: 15px 0;
+  border: 0;
+  border-radius: 10px;
+  font-family: "Montserrat", sans-serif;
+}
+
+svg {
+  margin-right: 10px;
+}
+
+footer {
+  margin-top: 30px;
+}
+
+@media screen and (max-width: 750px) {
+  h2 {
+    font-size: 2rem;
+    font-weight: 700;
+  }
+
+  .desktop {
+    display: none;
+  }
+
+  .mobile {
+    display: block;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+  }
+  .container {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    width: 350px;
+    padding-bottom: 30px;
+  }
+
+  footer {
+    text-align: center;
+    width: 350px;
+  }
+}
